@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>💪Christiaan's Personal Site</title>
+    
+    
+    <style>
+        img {
+          width: 500px;
+          height: auto;
+          transition: all 0.5s; 
+        }
+        #profilePic {
+         width: 200px; 
+         height: auto;  
+        }
+      </style>
+      
+</head>
+<body>
+    <table cellspacing="20">
+    <tr>
+        <td>
+            <img id="profilePic" src="christiaan.png" alt="Christiaan profile picture"> </img>
+        </td>
+       <td><h1>Christiaan Kruger</h1>
+        <p><em><strong>Web developer and graphic artist.</em></strong></p>
+        This is a line of text to test the writing of a paragraph in this web design bootcamp.
+        <br>
+        You can find my art page<strong> <a href="https://www.facebook.com/christiaankrugerart">here.</strong></a></td> 
+    </tr>
+ </table>
+    
+    <hr size="3">
+    <h2>The Pretty Picture</h2>
+    
+    
+    <p>The prompt was to list all the schools I have attended, but I didn't feel like doing that. Instead, I put a pretty picture below!</p>
+
+    
+
+    <div id="aContent">
+        <h1> CLICK A BUTTON, NOW!</h1>
+    </div>
+
+    <button>click this</button>
+    <button id="aButton">No, click this!</button>
+    <br>
+    <br>
+    <button id="theButton" onclick="theFunction()">This is the right button to be clicked</button>
+    <br>
+    <br>
+    <picture>
+        <img id="prettyPic" src="Files/pic1.jpg">
+        
+            </picture>
+            <p id="myText">There's a pretty picture.  In fact, I would say that is outstanding art.  There is such a deep sense of beauty and wonder in this painting that is simply <strong>astounding.</strong></p>
+    
+    <h3>My work experience</h3>
+    <table cellspacing="10">
+        <thead>
+            <th>Dates</th>
+            <th>Work</th>
+        </thead>
+        <tr>
+            <td>2013-2017</td>
+            <td>Horse whisperer</td>
+        </tr>
+        <tr>
+            <td>2017-2020</td>
+            <td>Lead fun idea developer</td>
+        </tr>
+    </table>
+    <hr size="3">
+
+    <h3> Skills</h3>
+    <table cellspacing="10">
+<tr>
+    <td>Jumping</td>
+    <td>⭐⭐⭐</td>
+    <td>Sitting</td>
+    <td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+    <td>Eating in moderation</td>
+    <td>⭐⭐⭐⭐⭐</td>
+    <td>Thinking</td>
+    <td>⭐⭐⭐⭐⭐</td>
+</tr>
+
+<tr>
+
+</tr>
+
+
+    </table>
+
+
+    <script>
+    function theFunction() {
+        var result = confirm("Are you sure you want to proceed?");
+        if (result == true) {
+            alert("You clicked ok.");
+        } else {
+            alert("You clicked cancel.");
+
+        }
+     }
+    </script>
+    
+   
+    
+    <script>
+        const aButton = document.getElementById('aButton')
+        const prettyPic = document.getElementById('prettyPic')
+        let isButtonClicked = false;
+    
+        aButton.addEventListener('click', () => {
+            prettyPic.src = 'https://i.imgur.com/9URaS4w.jpeg';
+            prettyPic.style.width = "400px";
+            isButtonClicked = true;
+            alert("You clicked the wrong button, and now the dog is severely disappointed in you.")
+        });
+    </script>
+   
+    <script>
+        
+        const image = document.getElementById("prettyPic");
+        const textElement = document.getElementById("myText")
+        image.addEventListener("mouseover",() => {
+            if (isButtonClicked) {
+          image.style.width = (image.offsetWidth * 0.6) + "px";
+          textElement.textContent = "Don't try to get him back now! He's had quite enough!";
+            }
+        });
+</script>
+<a href="hobbies.html">My hobbies.</a>
+<br>
+<a href="contact.html">Contact me.</a>
+<br>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>
